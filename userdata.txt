@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir -p /home/ec2-user/.ssh
+cat <<FILE > /home/ec2-user/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG+u14fmSqmhD3Fm5/gAwOKQQZFh04BxgIJ4vjm+isZwvWtEB4hy5BSKGREkLnH60Gs9BLkMs/gSechS0OSeZHeaQgs3Gm5qK6oSh6SLR5WGSzkiE63xVVQZ1F+0WH6SfrDoaFMhPOPuxKnQH4El1Ghjks6ZTWLkYl1eUk4BVFv30Rbghl8iVM9WPsF1U2d7MsjUJP1+gMQOe1gJMHvvviiSIirvfHZSuSFOiMuaZsPS93nBwkIXOaLLGvYeZnEph6qvAdISrcXc1pbZCDZIayyI/J1+rigyVCVQczTFFafzGblaKuDeHIAcoiYidMf3rpQZxemo2Q2xmeSOgLwAYN ec2-user@ip-172-31-12-22.us-west-1.compute.internal
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrIjC0hYG5oKcZZF1FBE/CgUjkQ1IqYz36OdmE+rr0oGGOKrylJhMjfiwNxGMzhVBqKKUBxrnHXFRLNlHZk+1akW1x58axiZzLaR9LlBC1W5L3WluFk/GuMAyLsuIBhuzrgVQ6M7sxxHyyzbnepFpGl6HqKZjH+RQPNUVCMbWIfhVmaNA7uBfMmq1otlV4SGkH2o+UK0yyCJ0bhoE0WPEVZV0SS+/4DqvU1f2qrKG1N4YZTRCjxhUeDFd3tnPXszHgu0k8kCZRbacWTnv7ltpFaGhBH+a/+Xc/S5UG4TN817VYDi5aHnqvoN+tVtj72gS6FKZnUh+/8kwx/2PEGUbR CI
+
+FILE
+sudo chown ec2-user.ec2-user /home/ec2-user/.ssh/authorized_keys
+sudo chmod 400 /home/ec2-user/.ssh/authorized_keys
+
